@@ -11,6 +11,8 @@
 #import "IntroScene.h"
 #import "NewtonScene.h"
 
+#import "CCScissorNode.h"
+
 // -----------------------------------------------------------------------
 #pragma mark - HelloWorldScene
 // -----------------------------------------------------------------------
@@ -43,11 +45,23 @@
     // Create a colored background (Dark Grey)
     CCNodeColor *background = [CCNodeColor nodeWithColor:[CCColor colorWithRed:0.2f green:0.2f blue:0.2f alpha:1.0f]];
     [self addChild:background];
-    
+	
+	// Add a clipping region
+    CCScissorNode* scissorNode = [CCScissorNode scissorNodeWithRect:CGRectMake(100, 100, 400, 250)];
+	[self addChild:scissorNode];
+
+	// Test scaling of the clipping node
+//	scissorNode.scaleX = 0.5f;
+//	scissorNode.scaleY = 0.5f;
+	
+	// For demo purposes colour in the clipping node so we can see where it is
+	CCNodeColor* colourNode = [CCNodeColor nodeWithColor:[CCColor colorWithRed:0.5 green:0.0 blue:0.0]];
+	[scissorNode addChild:colourNode];
+	
     // Add a sprite
     _sprite = [CCSprite spriteWithImageNamed:@"Icon-72.png"];
     _sprite.position  = ccp(self.contentSize.width/2,self.contentSize.height/2);
-    [self addChild:_sprite];
+    [scissorNode addChild:_sprite];
     
     // Animate sprite with action
     CCActionRotateBy* actionSpin = [CCActionRotateBy actionWithDuration:1.5f angle:360];

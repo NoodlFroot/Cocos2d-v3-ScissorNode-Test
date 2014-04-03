@@ -224,6 +224,7 @@
 		79E1F50C18EC5504007F320C /* newton-ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 79E1F50B18EC5504007F320C /* newton-ipad.png */; };
 		79E1F50E18EC5504007F320C /* newton.plist in Resources */ = {isa = PBXBuildFile; fileRef = 79E1F50D18EC5504007F320C /* newton.plist */; };
 		79E1F51018EC5504007F320C /* newton.png in Resources */ = {isa = PBXBuildFile; fileRef = 79E1F50F18EC5504007F320C /* newton.png */; };
+		79E1F56918ED6B37007F320C /* CCScissorNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E1F56718ED6B37007F320C /* CCScissorNode.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -682,6 +683,9 @@
 		79E1F50B18EC5504007F320C /* newton-ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "newton-ipad.png"; path = "Resources/newton-ipad.png"; sourceTree = "<group>"; };
 		79E1F50D18EC5504007F320C /* newton.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = newton.plist; path = Resources/newton.plist; sourceTree = "<group>"; };
 		79E1F50F18EC5504007F320C /* newton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = newton.png; path = Resources/newton.png; sourceTree = "<group>"; };
+		79E1F56618ED6B36007F320C /* CCScissorNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCScissorNode.h; path = Classes/Extensions/CCScissorNode.h; sourceTree = "<group>"; };
+		79E1F56718ED6B37007F320C /* CCScissorNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCScissorNode.m; path = Classes/Extensions/CCScissorNode.m; sourceTree = "<group>"; };
+		79E1F56818ED6B37007F320C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.md; path = Classes/Extensions/README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1577,6 +1581,7 @@
 		79E1F4EA18EC5504007F320C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				79E1F51C18EC5C73007F320C /* Extensions */,
 				79E1F4EB18EC5504007F320C /* AppDelegate.h */,
 				79E1F4EC18EC5504007F320C /* AppDelegate.m */,
 				79E1F4EE18EC5504007F320C /* HelloWorldScene.h */,
@@ -1594,6 +1599,16 @@
 				79E1F4FF18EC5504007F320C /* Rope.m */,
 			);
 			name = Classes;
+			sourceTree = "<group>";
+		};
+		79E1F51C18EC5C73007F320C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				79E1F56618ED6B36007F320C /* CCScissorNode.h */,
+				79E1F56718ED6B37007F320C /* CCScissorNode.m */,
+				79E1F56818ED6B37007F320C /* README.md */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1825,6 +1840,7 @@
 				79E1F28D18EC5502007F320C /* CCActionCatmullRom.m in Sources */,
 				79E1F3A518EC5503007F320C /* NSAttributedString+CCAdditions.m in Sources */,
 				79E1F46718EC5504007F320C /* CCBKeyframe.m in Sources */,
+				79E1F56918ED6B37007F320C /* CCScissorNode.m in Sources */,
 				79E1F42118EC5503007F320C /* CCControlTextureFactory.m in Sources */,
 				79E1F2A618EC5502007F320C /* CCAnimationCache.m in Sources */,
 				79E1F42A18EC5503007F320C /* CCTableView.m in Sources */,
